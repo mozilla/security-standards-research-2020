@@ -26,7 +26,7 @@ app.use(helmet.contentSecurityPolicy({
     imgSrc: ["'self'", "https://www.google-analytics.com"],
     objectSrc: ["'none'"],
     scriptSrc: ["'self'", "https://www.google-analytics.com/analytics.js"],
-    styleSrc: ["'self'"],
+    styleSrc: ["'self'", " https://security-standards-research.herokuapp.com/docs/SSR_2020_CFP_v1.pdf"],
   },
 }));
 app.use(helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" }));
