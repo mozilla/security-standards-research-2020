@@ -19,12 +19,12 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     baseUri: ["'none'"],
     defaultSrc: ["'self'", "https://www.google-analytics.com"],
-    connectSrc: ["https://www.google-analytics.com"],
+    connectSrc: ["'self'", "https://www.google-analytics.com"],
     fontSrc: ["'self'"],
     frameAncestors: ["'none'"],
     mediaSrc: ["'self'"],
     imgSrc: ["'self'", "https://www.google-analytics.com"],
-    objectSrc: ["'none'"],
+    objectSrc: ["'self'"],
     scriptSrc: ["'self'", "https://www.google-analytics.com/analytics.js"],
     styleSrc: ["'self'", " https://security-standards-research.herokuapp.com/docs/SSR_2020_CFP_v1.pdf"],
   },
@@ -50,6 +50,11 @@ app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
   res.render("landing-page", {
+  });
+});
+
+app.get("/papers-pdf", (req, res) => {
+  res.render("call-for-papers", {
   });
 });
 
