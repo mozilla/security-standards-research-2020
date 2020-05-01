@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/Metropolis/Metropolis-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2");
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  transition: all 0.2;
+}
+
+main {
+  height: 100vh;
+  padding: 0 2rem;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease 0.3s forwards;
+}
+
+.flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  line-height: 1;
+  font-size: 60px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.temp-landing-link {
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  height: 48px;
+  text-decoration: none;
+  padding: 0 3vh;
+  font-family: "Metropolis", sans-serif;
+}
+
+.temp-landing-link:hover,
+.temp-landing-link:focus {
+  border: 2px solid rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.temp-landing-link:active {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.temp-landing {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 10rem;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  .temp-landing {
+    padding: 4rem;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

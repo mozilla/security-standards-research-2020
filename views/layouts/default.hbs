@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/dist/app.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="{{ getString "websiteDescription" }}" />
+    <meta property="og:description" content="{{ getString "websiteDescription" }}" />
+    {{!-- <meta property="og:image" content="" /> --}}
+    <meta property="og:title" content="{{ getString "websiteTitle" }}" />
+    <meta property="og:url" content="https://ssr.mozilla.org" />
+    {{!-- <meta name="twitter:card" content="summary_large_image" /> --}}
+    <meta name="twitter:description" content="{{ getString "websiteDescription" }}" />
+    <meta name="twitter:title" content="{{ getString "websiteTitle" }}" />
+    <title>{{ getString "websiteTitle" }}</title>
+    <script type="text/javascript" src="/dist/app.min.js" defer></script>
+  </head>
+  <body>
+    <header>
+    </header>
+    {{{ body }}}
+    <footer>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "Website for the Security Standards Research Conference 2020",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla/security-standards-research-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozilla/security-standards-research-2020/issues"
+  },
+  "homepage": "https://github.com/mozilla/security-standards-research-2020#readme",
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "babel-minify": "^0.5.1",
+    "cssnano": "^4.1.10",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "helmet": "^3.22.0",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1"
+  },
+  "scripts": {
+    "build": "run-p build:*",
+    "build:css": "postcss public/css/app.css -o public/dist/app.min.css",
+    "build:js": "minify public/js/app.js -o public/dist/app.min.js",
+    "lint": "run-s lint:*",
+    "lint:css": "stylelint 'public/css/*.css'",
+    "lint:html": "node scripts/htmllint",
+    "lint:js": "eslint .",
+    "server": "nodemon app.js",
+    "start": "run-p build watch server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "run-p watch:*",
+    "watch:css": "onchange 'public/css/app.css' -- npm run build:css",
+    "watch:js": "onchange 'public/js/app.js' -- npm run build:js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "glob": "^7.1.6",
+    "htmllint": "^0.8.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
