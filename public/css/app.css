@@ -86,7 +86,7 @@ h1 {
   line-height: 1;
   font-size: var(--h1Size);
   opacity: .8;
-  margin-bottom: 0;
+  margin-bottom: calc(8px + min(1vh, 1vw));
   letter-spacing: 1px;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 1px;
