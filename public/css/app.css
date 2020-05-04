@@ -1,8 +1,5 @@
-@font-face {
-  font-family: "Metropolis";
-  font-style: normal;
-  font-weight: 500;
-  src: url("/fonts/Metropolis/Metropolis-Medium.woff2") format("woff2");
+* {
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -12,15 +9,46 @@
   src: url("/fonts/Metropolis/Metropolis-SemiBold.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Zilla-Slab";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/ZillaSlab/ZillaSlab-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Zilla-Slab";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/fonts/ZillaSlab/ZillaSlab-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Zilla-Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/ZillaSlab/ZillaSlab-Bold.woff2") format("woff2");
+}
+
+:root {
+  --h1Size: calc(90px + min(6vw, 6vh));
+  --textColor: rgba(0, 0, 0, 1);
+  --textColorSemiTransparent: rgba(0, 0, 0, 0.05);
+  --textStrokeColor: rgba(0, 0, 0, 0.314);
+  --backgroundColor: #f6f6f4;
+  --zillaSlab: "Zilla-Slab", monospace, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 html,
 body {
   font-family: sans-serif;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -34,11 +62,12 @@ a:hover,
 a:focus,
 a:active {
   transition: all 0.2;
+  -webkit-appearance: none;
 }
 
 main {
-  height: 100vh;
-  padding: 0 2rem;
+  height: 100%;
+  padding: 0 2vh;
 }
 
 .fade-in {
@@ -55,9 +84,13 @@ main {
 
 h1 {
   line-height: 1;
-  font-size: 60px;
-  margin-bottom: 16px;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: var(--h1Size);
+  opacity: .8;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--textStrokeColor);
 }
 
 h1,
@@ -67,15 +100,17 @@ p {
 
 p {
   font-weight: 300;
-  font-size: 20px;
-  margin-bottom: 24px;
-  color: rgba(0, 0, 0, 0.7);
+  font-size: calc(12px + min(1vh, 1vw));
+  margin-bottom: calc(36px + min(1vh, 1vw));
+  opacity: .8;
+  line-height: 1.5;
 }
 
 .temp-landing-link {
-  border: 2px solid rgba(0, 0, 0, 0.9);
+  border: 2px solid var(--textColor);
   background-color: rgba(0, 0, 0, 0);
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--textColor);
+  opacity: .9;
   border-radius: 8px;
   height: 48px;
   text-decoration: none;
@@ -87,7 +122,7 @@ p {
 .temp-landing-link:focus {
   border: 2px solid rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--textColorSemiTransparent);
 }
 
 .temp-landing-link:active {
@@ -95,22 +130,89 @@ p {
 }
 
 .temp-landing {
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 10rem;
-  border-radius: 8px;
+  border-radius: max(1vh, 1vw);
+  text-align: center;
+  position: absolute;
+  margin: auto;
 }
 
-@media screen and (max-width: 700px) {
-  .temp-landing {
-    padding: 4rem;
+.brought-to-you-by-wrapper {
+  bottom: 1rem;
+  font-size: calc(6px + min(1vh, 1vw));
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: auto auto min(4vh, 4vw) auto;
+  flex-wrap: nowrap;
+}
+
+.date {
+  font-family: var(--zillaSlab);
+  display: block;
+  opacity: .8;
+  margin-bottom: calc(36px + min(1vh, 1vw));
+}
+
+.coming-soon,
+.conference-name {
+  font-family: var(--zillaSlab);
+  font-size: 19px;
+  line-height: 1.3;
+}
+
+.conference-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.coming-soon {
+  font-weight: 300;
+}
+
+svg {
+  width: calc(90px + min(1vh, 1vw));
+  display: block;
+  margin-bottom: 6px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --h1Size: calc(50px + min(6vw, 6vh));
   }
 
+  .conference-name {
+    max-width: 300px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --textColor: rgba(255, 255, 255, .8);
+    --textColorSemiTransparent: rgba(255, 255, 255, .1);
+    --textStrokeColor: rgba(255, 255, 255, .3);
+    --backgroundColor: #303135;
+  }
+
+  .temp-landing-link:hover {
+    color: var(--textColor);
+  }
+
+  h1,
   p {
-    font-size: 17px;
+    opacity: 1;
   }
 
-  h1 {
-    font-size: 52px;
+  svg path {
+    fill: #ffffff;
   }
 }
 

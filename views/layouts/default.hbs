@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" ontouchmove>
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/dist/app.min.css" />
@@ -16,11 +16,7 @@
     <title>{{ getString "websiteTitle" }}</title>
     <script type="text/javascript" src="/dist/app.min.js" defer></script>
   </head>
-  <body>
-    <header>
-    </header>
+  <body onclick tabindex="0">
     {{{ body }}}
-    <footer>
-    </footer>
   </body>
 </html>
