@@ -1,2 +1,3 @@
-# security-standards-research-2020
-Website for the Security Standardisation Research Conference 2020
+### Security Standardisation Research Conference 2020
+
+https://ssr2020.mozilla.org
