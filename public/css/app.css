@@ -31,7 +31,7 @@
 }
 
 :root {
-  --h1Size: calc(90px + min(6vw, 6vh));
+  --h1Size: calc(90px + 6vh);
   --textColor: rgba(0, 0, 0, 1);
   --textColorSemiTransparent: rgba(0, 0, 0, 0.05);
   --textStrokeColor: rgba(0, 0, 0, 0.314);
@@ -86,7 +86,7 @@ h1 {
   line-height: 1;
   font-size: var(--h1Size);
   opacity: 0.8;
-  margin-bottom: calc(8px + min(1vh, 1vw));
+  margin-bottom: 0;
   letter-spacing: 1px;
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke-width: 1px;
@@ -100,8 +100,7 @@ p {
 
 p {
   font-weight: 300;
-  font-size: calc(12px + min(1vh, 1vw));
-  margin-bottom: calc(36px + min(1vh, 1vw));
+  margin-bottom: calc(36px + 1vh);
   opacity: 0.8;
   line-height: 1.5;
 }
@@ -137,12 +136,13 @@ p {
 }
 
 .brought-to-you-by-wrapper {
+  position: absolute;
   bottom: 1rem;
-  font-size: calc(6px + min(1vh, 1vw));
+  font-size: calc(6px + 1vh);
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: auto auto min(4vh, 4vw) auto;
+  margin: auto auto 4vh auto;
   flex-wrap: nowrap;
 }
 
@@ -150,7 +150,7 @@ p {
   font-family: var(--zillaSlab);
   display: block;
   opacity: 0.8;
-  margin-bottom: calc(36px + min(1vh, 1vw));
+  margin-bottom: calc(36px + 1vh);
 }
 
 .coming-soon,
@@ -170,7 +170,8 @@ p {
 }
 
 svg {
-  width: calc(90px + min(1vh, 1vw));
+  width: calc(90px + 1vh);
+  max-width: 130px;
   display: block;
   margin-bottom: 6px;
 }
@@ -186,7 +187,22 @@ svg {
 
 @media screen and (max-width: 600px) {
   :root {
-    --h1Size: calc(50px + min(6vw, 6vh));
+    --h1Size: calc(60px + 6vw);
+  }
+
+  svg {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --h1Size: calc(48px + 6vw);
+  }
+
+  .coming-soon,
+  .conference-name {
+    font-size: 18px;
   }
 }
 
