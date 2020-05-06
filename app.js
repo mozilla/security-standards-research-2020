@@ -20,15 +20,15 @@ app.use(helmet({
 app.use(helmet.contentSecurityPolicy({
   directives: {
     baseUri: ["'none'"],
-    defaultSrc: ["'self'", "https://www.google-analytics.com"],
-    connectSrc: ["'self'", "https://www.google-analytics.com"],
+    defaultSrc: ["'self'"],
+    connectSrc: ["'self'"],
     fontSrc: ["'self'"],
-    frameAncestors: ["'none'"],
+    frameAncestors: ["'self'"],
     mediaSrc: ["'self'"],
-    imgSrc: ["'self'", "https://www.google-analytics.com"],
-    objectSrc: ["'self'"],
-    scriptSrc: ["'self'", "https://www.google-analytics.com/analytics.js"],
-    styleSrc: ["'self'", " https://security-standards-research.herokuapp.com/docs/SSR_2020_CFP_v1.pdf"],
+    imgSrc: ["'self'"],
+    objectSrc: ["'self'", "blob"],
+    scriptSrc: ["'self'"],
+    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'"],
   },
 }));
 app.use(helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" }));
