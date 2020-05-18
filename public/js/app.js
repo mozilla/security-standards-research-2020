@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (availableIntersectionObserver) {
     const observerOptions = {
       root: null,
-      rootMargin: "70%",
+      rootMargin: "10px",
       threshold: 0.5,
     };
 
     const onObservation = (entries, observer) => {
       entries.forEach(entry => {
-        if ((entry.intersectionRatio > .5 && entry.target.classList.contains("papers-section"))) {
+        if (entry.isIntersecting && (entry.intersectionRatio > .5 && entry.target.classList.contains("papers-section"))) {
           const sectionId = entry.target.dataset.sectionId;
           const previouslyActiveLink = document.querySelector(".active");
           if (previouslyActiveLink.dataset.sectionId !== entry.target.dataset.sectionId) {
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     subNavLink.addEventListener("click", (e) => {
       e.preventDefault();
       const papersParagraph = document.querySelector(e.target.dataset.sectionString);
-      const newYScroll = papersParagraph.offsetTop;
-      window.scroll(0, newYScroll, "smooth");
+      const newYScroll = papersParagraph.offsetTop+200;
+      window.scrollTo(0, newYScroll);
       if (!subNavLink.classList.contains("active")) {
         const previousActive = document.querySelector(".active");
         previousActive.classList.remove("active");
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   win.onscroll = () => {
-    if (win.pageYOffset > 500) {
+    if (win.pageYOffset > 300) {
       if (subNav) {
         subNav.classList.add("fix-nav");
       }

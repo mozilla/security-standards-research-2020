@@ -657,15 +657,15 @@ section#call-for-papers {
   margin: 0 auto auto auto;
   /* position: fixed; */
   position: absolute;
-  padding: 4rem 2rem;
-  top: 0;
-  transition: all 0.3s ease;
+  padding: 0 2rem;
+  top: 5rem;
+  transition: all 1s ease;
 }
 
 .fix-nav {
   position: fixed;
-  top: 100px;
-  transition: all 0.3s ease;
+  top: 10rem;
+  transition: all 1s ease;
 }
 
 .content-right {
