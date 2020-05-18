@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const subNavLinks = Array.from(document.querySelectorAll(".sub-nav-link"));
   if (availableIntersectionObserver) {
     const observerOptions = {
-      // root: null,
-      rootMargin: "90%",
+      root: null,
+      rootMargin: "70%",
       threshold: 0.5,
     };
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       const papersParagraph = document.querySelector(e.target.dataset.sectionString);
       const newYScroll = papersParagraph.offsetTop;
-      window.scrollTo(0, newYScroll);
+      window.scroll(0, newYScroll, "smooth");
       if (!subNavLink.classList.contains("active")) {
         const previousActive = document.querySelector(".active");
         previousActive.classList.remove("active");
