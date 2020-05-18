@@ -55,8 +55,39 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/papers-pdf", (req, res) => {
-  res.render("call-for-papers", {
+app.get("/call-for-papers", (req, res) => {
+  res.render("papers/call-for-papers", {
+  });
+});
+
+app.get("/accepted-papers", (req, res) => {
+  res.render("papers/accepted-papers", {
+  });
+});
+
+app.get("/paper-submission", (req, res) => {
+  res.render("papers/paper-submission", {
+  });
+});
+
+app.get("/important-dates", (req, res) => {
+  res.render("important-dates", {
+
+  });
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact", {
+  });
+});
+
+app.get("/programme", (req, res) => {
+  res.render("programme", {
+  });
+});
+
+app.get("/registration", (req, res) => {
+  res.render("registration", {
   });
 });
 
