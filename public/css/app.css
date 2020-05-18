@@ -166,6 +166,12 @@ main {
   opacity: .9;
 } */
 
+svg#Mozilla {
+  max-width: 100px;
+  margin-left: 8px;
+  margin: auto auto auto 8px;
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease 0.2s forwards;
@@ -275,12 +281,12 @@ main {
 }
 
 footer {
-  display: flex;
   background: var(--textBlack);
-  padding: 1rem 2rem;
+  padding: 2rem;
   margin: auto auto 0 auto;
   width: 100%;
 }
+
 .auto {
   margin: auto;
 }
@@ -711,7 +717,6 @@ p {
 p {
   font-weight: 300;
   margin-bottom: calc(36px + 1vh);
-  opacity: 0.8;
   line-height: 1.5;
 }
 
@@ -761,6 +766,7 @@ p {
   font-size: calc(6px + 1vh);
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
   margin: auto;
   flex-wrap: nowrap;
@@ -786,13 +792,6 @@ p {
 
 .coming-soon {
   font-weight: 300;
-}
-
-svg {
-  width: calc(90px + 1vh);
-  max-width: 130px;
-  display: block;
-  margin-bottom: 6px;
 }
 
 .noselect {
@@ -850,27 +849,6 @@ svg {
 .mobile-menu-button:active {
   outline: none;
   opacity: .7;
-}
-
-@media screen and (max-width: 600px) {
-  :root {
-    --h1Size: calc(60px + 6vw);
-  }
-
-  svg {
-    max-width: 100px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  :root {
-    --h1Size: calc(48px + 6vw);
-  }
-
-  .coming-soon,
-  .conference-name {
-    font-size: 18px;
-  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1034,6 +1012,7 @@ svg {
 @media screen and (max-width: 600px) {
   :root {
     --containerPadding: 3rem;
+    --h1Size: calc(60px + 6vw);
   }
 
   .important-date-list-item {
@@ -1073,6 +1052,17 @@ svg {
   }
 }
 
+@media screen and (max-width: 500px) {
+  :root {
+    --h1Size: calc(48px + 6vw);
+  }
+
+  .coming-soon,
+  .conference-name {
+    font-size: 18px;
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1082,7 +1072,6 @@ svg {
     opacity: 1;
   }
 }
-/* Icon 3 */
 
 .mobile-menu-button {
   background: transparent;
