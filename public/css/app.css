@@ -1019,7 +1019,16 @@ svg {
     pointer-events: all;
     transition: all 0.3s ease;
   }
+}
 
+@media screen and (max-width: 700px) {
+  .landing-conference-ssr {
+    font-size: 90px;
+  }
+
+  .landing-conference-name {
+    max-width: 320px;
+  }
 }
 
 @media screen and (max-width: 600px) {
