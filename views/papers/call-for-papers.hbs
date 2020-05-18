@@ -1,0 +1,91 @@
+<main class="sub-main">
+
+</main>
+<div class="flx">
+<div class="paper-content flx-row">
+  <div class="content-left">
+    <div class="flx-col sub-nav">
+      <a class="sub-nav-link active" href="#call-for-papers" data-section-string="#call-for-papers" data-section-id="0">Call for Papers</a>
+      <a class="sub-nav-link" href="#topics" data-section-string="#topics" data-section-id="1">Topics</a>
+      <a class="sub-nav-link" href="#committees" data-section-string="#committees" data-section-id="2">Committees</a>
+    </div>
+  </div>
+
+  <div class="content-right">
+    <section id="call-for-papers" class="call-for-papers papers-section" data-section-id="0">
+      <div class="max-content-width">
+        {{!-- <div class="flx-row sub-nav">
+          <a class="sub-nav-link" href="#committees">Committees</a>
+          <a class="sub-nav-link" href="#topics">Topics</a>
+        </div> --}}
+        <h2 class="section-headline">Call for Papers</h2>
+        <section class="submission-guidelines">
+          <h3 class="block-section-sub-head">Submission Guidelines</h3>
+          {{#each (getSubmissionGuidelines)}}
+            {{#if this.callout}}
+              <div class="copy-callout copy-block copy-block-small observed">
+                <p>{{{ this.callout }}}</p>
+              </div>
+            {{else}}
+              <p class="copy-block copy-block-small observed">{{{ this }}}</p>
+            {{/if}}
+          {{/each}}
+        </section>
+      </div>
+    </section>
+
+    <section id="topics" class="topics papers-section" data-section-id="1">
+      <div>
+        <div class="max-content-width auto">
+          <h3 class="section-sub-head observed block-before">Topics</h3>
+        </div>
+        <div class="topics-list-wrapper auto">
+          <ul class="topics-list">
+            {{#each (getTopics)}}
+              <li class="topic-wrapper observed">
+                <span>{{ this }}</span>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="committees" class="committees papers-section" data-section-id="2">
+      <div>
+        <section class="max-content-width program-committee">
+          <h2 class="section-sub-head block-before">Committees</h2>
+          <h3 class="block-section-sub-head">Program Committee</h3>
+          <ul class="program-committee-list committee-list">
+            {{#each (getProgramCommittee)}}
+              <li class="program-committee-list-item committee-list-item observed">
+                <span="program-committee-member">
+                  {{ this }}
+                </span>
+              </li>
+            {{/each}}
+          </ul>
+          </section>
+          <section class="organizing-committee-wrapper">
+            <div class="max-content-width">
+              <h3 class="block-section-sub-head">Organizing Committee</h3>
+              <ul class="committee-list organizing-committee-list">
+                {{#each (getOrganizingCommittee)}}
+                  <li class="flx-row committee-list-item observed">
+                    <span class="organizing-committee-member-title">
+                      {{ this.memberTitle }}
+                    </span>
+                    <span class="organizing-committee-member-name">
+                      {{{ this.memberName }}}
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+    </section>
+  </div>
+</div>
+
+
+</div>
