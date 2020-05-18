@@ -58,6 +58,10 @@ body {
   justify-content: center;
 }
 
+main.landing {
+  min-height: 50vh;
+}
+
 
 :root {
   --backgroundColor: #f6f6f4;
@@ -377,12 +381,10 @@ ul li {
 }
 
 header  {
-  display: flex;
-  flex-direction: column;
-  top: -60px;
+  /* top: -60px; */
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 4;
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.3s ease;
@@ -878,10 +880,6 @@ svg {
 }
 
 @media screen and (max-width: 900px) {
-
-  main.landing {
-    min-height: 50vh;
-  }
 
   main {
     margin: 50px 0;
