@@ -131,7 +131,7 @@ main {
   height: 50%;
   padding: 0 2vh;
   position: relative;
-  margin: auto 2rem;
+  margin: auto var(--contentPadding);
 }
 
 .landing::after {
@@ -144,14 +144,14 @@ main {
   /* background: url("/img/avatars.svg"); */
   background-repeat: repeat;;
   background-position: center center;
-  background-size: 20%;
+  background-size: 40%;
   background-attachment: fixed;
   display: flex;
   content: "";
-  opacity: .9;
+  opacity: 1;
 }
-/* 
-.landing::before {
+
+/* .landing::before {
   position: absolute;
   content: "";
   display: flex;
@@ -163,7 +163,7 @@ main {
   background: radial-gradient(#1c1c1c42, #000000b2);
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: .9;
+  opacity: 1;
 } */
 
 svg#Mozilla {
@@ -246,7 +246,7 @@ svg#Mozilla {
 
 .event-title {
   font-family: var(--zillaSlab);
-  margin-bottom: 4px;
+  margin-bottom: 16px;
   font-size: 24px;
 }
 
@@ -263,7 +263,7 @@ svg#Mozilla {
 
 .google-calendar-link-text {
   color: rgba(0, 0, 0, .7);
-  font-size: 15px;
+  font-size: 14px;
   display: flex;
   align-items: center;
 }
@@ -282,7 +282,7 @@ svg#Mozilla {
 
 footer {
   background: var(--textBlack);
-  padding: 2rem;
+  padding: var(--contentPadding);
   margin: auto auto 0 auto;
   width: 100%;
 }
@@ -407,13 +407,13 @@ header  {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem var(--contentPadding) 1rem var(--contentPadding);
   width: 100%;
   margin: auto;
 }
 
 .slide-in-header .header-content {
-  padding: .5rem 2rem;
+  padding: .5rem var(--contentPadding);
 }
 
 .slide-in-header .header-navigation {
@@ -450,6 +450,10 @@ header  {
 .header-link:focus {
   background: var(--mozGrey);
   outline: none;
+}
+
+.header-link:active {
+  background: var(--mozDarkGrey);
 }
 
 .active-link,
@@ -655,7 +659,6 @@ section#call-for-papers {
 .content-left {
   justify-content: flex-start;
   margin: 0 auto auto auto;
-  /* position: fixed; */
   position: absolute;
   padding: 0 2rem;
   top: 5rem;
@@ -716,7 +719,7 @@ p {
 
 p {
   font-weight: 300;
-  margin-bottom: calc(36px + 1vh);
+  margin-bottom: 2rem;
   line-height: 1.5;
 }
 
@@ -858,13 +861,17 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-
   main {
-    margin: 50px 0;
+    margin: 50px 0 0 0;
   }
 
   footer {
     min-height: 100px;
+  }
+
+  .important-date-list-item {
+    flex: 1 1 100%;
+    margin: .5rem 0;
   }
 
   .show-mobile {
@@ -1015,12 +1022,9 @@ p {
     --h1Size: calc(60px + 6vw);
   }
 
-  .important-date-list-item {
-    flex: 1 1 100%;
-  }
-
   .full-screen {
     margin-top: 8rem;
+    padding-bottom: 4rem;
   }
 
   p,
@@ -1060,6 +1064,29 @@ p {
   .coming-soon,
   .conference-name {
     font-size: 18px;
+  }
+
+  h1.landing-conference-ssr {
+    font-size: 70px;
+  }
+
+  .event-date {
+    font-size: 15px;
+  }
+
+  .event-title {
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  :root {
+    --contentPadding: 1rem;
+  }
+
+  h1.landing-conference-ssr {
+    font-size: 60px;
   }
 }
 

@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (availableIntersectionObserver) {
     const observerOptions = {
       root: null,
-      rootMargin: "10px",
-      threshold: 0.5,
+      rootMargin: "20px",
+      threshold: 0.15,
     };
 
     const onObservation = (entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && (entry.intersectionRatio > .5 && entry.target.classList.contains("papers-section"))) {
+        if ((entry.intersectionRatio > .15 && entry.target.classList.contains("papers-section"))) {
           const sectionId = entry.target.dataset.sectionId;
           const previouslyActiveLink = document.querySelector(".active");
           if (previouslyActiveLink.dataset.sectionId !== entry.target.dataset.sectionId) {
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     subNavLink.addEventListener("click", (e) => {
       e.preventDefault();
       const papersParagraph = document.querySelector(e.target.dataset.sectionString);
-      const newYScroll = papersParagraph.offsetTop+200;
+      const newYScroll = papersParagraph.offsetTop+300;
       window.scrollTo(0, newYScroll);
       if (!subNavLink.classList.contains("active")) {
         const previousActive = document.querySelector(".active");
