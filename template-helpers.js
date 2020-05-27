@@ -141,15 +141,21 @@ function getOrganizingCommittee() {
   return [
     {
       memberTitle: "General Chair",
-      memberName: "<span class='committee-name'>Thyla van der Merwe<span class='comma'>,</span></span> Mozilla, London, UK",
+      memberName: "Thyla van der Merwe",
+      memberNameLocation: "<span class='committee-name'>Thyla van der Merwe<span class='comma'>,</span></span> Mozilla, London, UK",
+      emailAddress: "tvandermerwe@mozilla.com",
     },
     {
-      memberTitle: "PC co-chair",
-      memberName: "<span class='committee-name'>Maryam Mehrnezhad<span class='comma'>,</span></span> Newcastle University, UK",
+      memberTitle: "PC Co-chair",
+      memberName: "Maryam Mehrnezhad",
+      memberNameLocation: "<span class='committee-name'>Maryam Mehrnezhad<span class='comma'>,</span></span> Newcastle University, UK",
+      emailAddress: "maryam.mehrnezhad@newcastle.ac.uk",
     },
     {
-      memberTitle: "PC co-chair",
-      memberName: " <span class='committee-name'>Chris Mitchell<span class='comma'>,</span></span> RHUL, UK",
+      memberTitle: "PC Co-chair",
+      memberName: "Chris Mitchell",
+      memberNameLocation: " <span class='committee-name'>Chris Mitchell<span class='comma'>,</span></span> RHUL, UK",
+      emailAddress: "me@chrismitchell.net",
     },
 
   ];
@@ -231,6 +237,13 @@ function getTopics() {
   ];
 }
 
+function showSubNav(args) {
+  if (args.data.exphbs.view && args.data.exphbs.view === "papers/call-for-papers") {
+    return true;
+  }
+  return false;
+}
+
 module.exports = {
   getAuthorInstruction,
   getImportantDates,
@@ -241,4 +254,5 @@ module.exports = {
   getString,
   getSubmissionGuidelines,
   getTopics,
+  showSubNav,
 };
