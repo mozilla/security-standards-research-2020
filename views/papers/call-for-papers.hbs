@@ -13,10 +13,6 @@
   <div class="content-right">
     <section id="call-for-papers" class="call-for-papers papers-section" data-section-id="0">
       <div class="max-content-width">
-        {{!-- <div class="flx-row sub-nav">
-          <a class="sub-nav-link" href="#committees">Committees</a>
-          <a class="sub-nav-link" href="#topics">Topics</a>
-        </div> --}}
         <h2 class="section-headline">Call for Papers</h2>
         <section class="submission-guidelines">
           <h3 class="block-section-sub-head">Submission Guidelines</h3>
@@ -26,7 +22,7 @@
                 <p>{{{ this.callout }}}</p>
               </div>
             {{else}}
-              <p class="copy-block copy-block-small observed">{{{ this }}}</p>
+              <p class="copy-block copy-block-small observed txt-light">{{{ this }}}</p>
             {{/if}}
           {{/each}}
         </section>
@@ -42,7 +38,7 @@
           <ul class="topics-list">
             {{#each (getTopics)}}
               <li class="topic-wrapper observed">
-                <span>{{ this }}</span>
+                <span class="topic txt-light">{{ this }}</span>
               </li>
             {{/each}}
           </ul>
@@ -57,7 +53,7 @@
           <h3 class="block-section-sub-head">Program Committee</h3>
           <ul class="program-committee-list committee-list">
             {{#each (getProgramCommittee)}}
-              <li class="program-committee-list-item committee-list-item observed">
+              <li class="program-committee-list-item committee-list-item observed txt-light">
                 <span="program-committee-member">
                   {{ this }}
                 </span>
@@ -74,8 +70,8 @@
                     <span class="organizing-committee-member-title">
                       {{ this.memberTitle }}
                     </span>
-                    <span class="organizing-committee-member-name">
-                      {{{ this.memberName }}}
+                    <span class="organizing-committee-member-name txt-light">
+                      {{{ this.memberNameLocation }}}
                     </span>
                   </li>
                 {{/each}}

@@ -37,6 +37,13 @@
       {{/each}}
     </ul>
     </div>
+    {{#if (showSubNav)}}
+      <div class="sub-nav-mobile show-mobile">
+        <a class="sub-nav-link active" href="#call-for-papers" data-section-string="#call-for-papers" data-section-id="0">Call for Papers</a>
+        <a class="sub-nav-link" href="#topics" data-section-string="#topics" data-section-id="1">Topics</a>
+        <a class="sub-nav-link" href="#committees" data-section-string="#committees" data-section-id="2">Committees</a>
+      </div>
+    {{/if}}
   </div>
   <div class="header-content desktop-menu">
     <div class="branding flx-col">
