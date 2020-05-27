@@ -40,9 +40,11 @@
   </div>
   <div class="header-content desktop-menu">
     <div class="branding flx-col">
-      <span class="ssr-2020">SSR 2020</span>
-      <span class="conference-name-small">{{getString "conference-name"}}</span>
-      <span class="date header-date ">11/30/2020 - 12/1/2020</span>
+      <a class="ssr-link" href="/">
+        <span class="ssr-2020">SSR 2020</span>
+      </a>
+      <span class="conference-name-small">{{getString "conference-name-full"}}</span>
+      <span class="date header-date ">30 November 2020 - 1 December 2020</span>
     </div>
     <ul class="header-navigation">
       {{#each (getHeaderLinks)}}

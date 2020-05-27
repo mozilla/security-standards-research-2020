@@ -1,8 +1,9 @@
 "use strict";
 
 const siteStrings = {
-  "conference-name": "Security Standardisation Research Conference",
-  "date": "11/30/2020 - 12/1/2020",
+  "conference-name": "Security Standardisation Research",
+  "conference-name-full": "Security Standardisation Research Conference",
+  "date": "30 November 2020 - 1 December 2020",
   "websiteTitle": "Security Standardisation Research Conference 2020 - Brought to you by Mozilla",
   "websiteDescription": "A virtual conference covering the full spectrum of research on security standardisation.",
 };
@@ -38,16 +39,16 @@ function getHeaderLinks(args) {
       activeLink: (pageViewData.includes("papers/")) ? activeClass : "",
       children: [
         {
+          linkTitle: "Call for Papers",
+          linkHref: "/call-for-papers",
+        },
+        {
           linkTitle: "Paper Submission",
           linkHref: "/paper-submission",
         },
         {
           linkTitle: "Accepted Papers",
           linkHref: "/accepted-papers",
-        },
-        {
-          linkTitle: "Call for Papers",
-          linkHref: "/call-for-papers",
         },
       ],
     },
@@ -97,8 +98,8 @@ function getImportantDates() {
       calendarLink: "https://calendar.google.com/calendar/r/eventedit?text=SSR+2020+Camera+Ready+Due&dates=20201012/20201013&details=For+details,+link+here:+https://ssr2020.mozilla.org",
     },
     {
-      eventTitle: "SSR2020 Conference",
-      eventDate: "30 November – 1 December 2020",
+      eventTitle: "SSR 2020 Conference",
+      eventDate: "30 November 2020 - 1 December 2020",
       day: "30",
       month: "Nov",
       dateType: "Deadline:",
@@ -111,7 +112,7 @@ function getSubmissionGuidelines() {
   return [
     "Submission Guidelines Papers offering research contributions to the area of security standardisation are solicited for submission to the SSR 2020 conference. SSR will also accept <span class='bold'>Systematisation of Knowledge (SoK)</span> papers relating to security standardisation, which integrate experience and previous research, drawing new comprehensive conclusions. SoK papers should evaluate, systematise, and contextualise existing knowledge. They should provide a new viewpoint, offer a comprehensive taxonomy, or cast doubt on long-held beliefs, based on compelling evidence. We also welcome SoK papers that document existing standardisation practices and analyse their weaknesses and strengths. We also encourage submission of <span class='bold'>Vision papers</span> relating to security standardisation. The vision track is intended to report on work in progress or concrete ideas for work that has yet to begin. The focus in the vision track is to spark discussion with the goal to provide the authors helpful feedback, pointers to potentially related investigations, and new ideas to explore. Suitable submissions to the vision track include traditional work-in-progress pieces such as preliminary results of pre-studies, but also research proposals and position papers outlining future research.",
     "Submissions should be made using EasyChair at: <a href='https://easychair.org/account/signin?l=gUlMvW71SRWpVzOfHjItS5#' class='nested-link' target='_blank' rel='noopener noreferrer'>https://easychair.org/account/signin?l=gUlMvW71SRWpVzOfHjItS5#</a>",
-    "Papers may present theory, applications or practical experience in the field of security standardisation, including, but not necessarily limited to <a class='nested-link' href='#topics'>these topics</a>",
+    "Papers may present theory, applications or practical experience in the field of security standardisation, including, but not necessarily limited to <a class='nested-link' href='#topics'>these topics</a>.",
   ];
 }
 
@@ -148,7 +149,7 @@ function getOrganizingCommittee() {
     },
     {
       memberTitle: "PC co-chair",
-      memberName: " <span class='committee-name'>Chris Mitchel<span class='comma'>l,</span></span> RHUL, UK (me@chrismitchell.net)",
+      memberName: " <span class='committee-name'>Chris Mitchell<span class='comma'>,</span></span> RHUL, UK",
     },
 
   ];
@@ -157,6 +158,7 @@ function getOrganizingCommittee() {
 function getProgramCommittee() {
   return [
     "Steve Babbage, Vodafone",
+    "Richard Barnes, Cisco",
     "Benjamin Beurdouche, Mozilla",
     "Lily Chen, National Institute of Standards and Technology (NIST)",
     "Liqun Chen, University of Surrey ",
@@ -169,6 +171,7 @@ function getProgramCommittee() {
     "Saqib A. Kakvi, Bergische Universität Wupperta",
     "Mohsin Khan, University of Helsinki",
     "Markulf Kohlweiss, University of Edinburgh",
+    "Thalia Laing, HP",
     "Wanpeng Li, University of Aberdeen",
     "Catherine Meadows, Naval Research Laboratory",
     "David Naccache, ENS Paris ",
