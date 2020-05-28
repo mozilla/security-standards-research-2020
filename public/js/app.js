@@ -15,10 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.querySelectorAll(".link-has-children").forEach(parentLink => {
     const linkParentWrapper = parentLink.parentElement;
+    const currentParentLinkId = parentLink.dataset.parentId;
     parentLink.addEventListener("click", () => {
       linkParentWrapper.classList.toggle("show-children");
     });
     parentLink.addEventListener("focus", () => {
+      const previouslyOpenParentLink = document.querySelector(".show-children");
+      if (previouslyOpenParentLink && previouslyOpenParentLink.dataset.parentId !== currentParentLinkId) {
+        previouslyOpenParentLink.classList.remove("show-children");
+      }
       linkParentWrapper.classList.add("show-children");
     });
   });
@@ -94,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
   win.onscroll = () => {
     if (win.pageYOffset > 300) {
       if (subNav) {
@@ -126,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (mobileMenuButton.classList.contains("open")) {
           e.preventDefault();
           toggleMobileMenu();
-          document.body.classList.add(".opacity-0")
+          document.body.classList.add(".opacity-0");
           setTimeout(() => {
             headerLink.click();
           }, 200);

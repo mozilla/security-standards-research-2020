@@ -25,7 +25,7 @@
             </button>
             <div class="link-children">
               {{#each children}}
-                <a class="header-link flx-row child-link" href="{{linkHref}}">{{linkTitle}}</a>
+                <a class="header-link flx-row child-link {{ cssClasses }}" href="{{linkHref}}">{{linkTitle}}</a>
               {{/each}}
             </div>
           {{else}}
@@ -57,13 +57,13 @@
       {{#each (getHeaderLinks)}}
         <li class="{{#if children}} list-item-has-children {{/if}}">
           {{#if children}}
-            <button class="header-link flx-row {{activeLink}} link-has-children">
+            <button class="header-link flx-row {{activeLink}} link-has-children" data-parent-id={{ parentId }}>
               {{linkTitle}}
               <svg class="menu-down" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="context-fill" d="M8 12a1 1 0 0 1-.707-.293l-5-5a1 1 0 0 1 1.414-1.414L8 9.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5A1 1 0 0 1 8 12z"></path></svg>
             </button>
             <div class="link-children">
               {{#each children}}
-                <a class="header-link flx-row child-link" href="{{linkHref}}">{{linkTitle}}</a>
+                <a class="header-link flx-row child-link {{ cssClasses }}" href="{{linkHref}}">{{linkTitle}}</a>
               {{/each}}
             </div>
           {{else}}

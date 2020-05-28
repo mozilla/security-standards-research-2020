@@ -82,12 +82,17 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/programme", (req, res) => {
-  res.render("programme", {
+  res.render("programme/programme", {
   });
 });
 
 app.get("/registration", (req, res) => {
   res.render("registration", {
+  });
+});
+
+app.get("/invited-speakers", (req, res) => {
+  res.render("programme/invited-speakers", {
   });
 });
 

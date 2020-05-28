@@ -36,6 +36,7 @@ function getHeaderLinks(args) {
     {
       linkTitle: "Papers",
       linkClasses: "drop-down",
+      parentId: "papers",
       activeLink: (pageViewData.includes("papers/")) ? activeClass : "",
       children: [
         {
@@ -55,7 +56,19 @@ function getHeaderLinks(args) {
     {
       linkTitle: "Programme",
       linkHref: "/programme",
-      activeLink: (pageViewData === "programme") ? activeClass : "",
+      parentId: "programme",
+      activeLink: (pageViewData.includes("programme")) ? activeClass : "",
+      children: [
+        {
+          linkTitle: "Invited Speakers",
+          linkHref: "/programme/invited-speakers",
+        },
+        {
+          linkTitle: "Programme",
+          linkHref: "/programme",
+          cssClasses: "show-mobile",
+        },
+      ],
     },
     {
       linkTitle: "Registration",
