@@ -116,10 +116,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const bgSpans = document.querySelectorAll(".bg");
+  const bgSpans = document.querySelectorAll(".bg-landing");
   let activeSlideNum = 0;
   const crossFadeImg = () => {
-    console.log("CrossFade");
     bgSpans[activeSlideNum].classList.remove("active-slide");
     if (activeSlideNum === 3) {
       activeSlideNum = 0;
@@ -127,9 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
       activeSlideNum++;
     }
     bgSpans[activeSlideNum].classList.add("active-slide");
-    console.log(activeSlideNum);
   };
-  if (bgSpans) {
+  if (bgSpans.length > 0) {
     crossFadeImg();
     window.setInterval(()=> {
       crossFadeImg();
