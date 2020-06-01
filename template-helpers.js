@@ -61,7 +61,7 @@ function getHeaderLinks(args) {
       children: [
         {
           linkTitle: "Invited Speakers",
-          linkHref: "/programme/invited-speakers",
+          linkHref: "/invited-speakers",
         },
         {
           linkTitle: "Programme",
