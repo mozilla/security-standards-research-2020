@@ -60,7 +60,84 @@ body {
 }
 
 main.landing {
-  min-height: 50vh;
+  min-height: 30vh;
+  /* background-image: url("/img/SSR-COMMONS1.png"); */
+  /* background-image: url("/img/honey-comb.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+  position: relative;
+  display: flex;
+}
+
+.virtual-callout-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, .9);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  /* transform: translateY(80px); */
+  opacity: 0;
+  animation: fadeUp 0.3s ease-in-out 1s forwards;
+}
+
+.virtual-callout::before {
+  content: "";
+  background-image: url(/img/info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-size: contain;
+  opacity: .2;
+  margin-right: 8px;
+  margin: auto 8px auto auto;
+}
+
+.virtual-callout {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease;
+  /* animation: bgImages 20s ease infinite; */
+  opacity: 0;
+}
+
+.active-slide {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.bg-img-4 {
+  background-image: url("/img/ssr-bg-1.jpg");
+}
+
+.bg-img-3 {
+  background-image: url("/img/ssr-bg-2.jpeg");
+}
+
+.bg-img-1 {
+  background-image: url("/img/ssr-bg-3.jpg");
+}
+
+.bg-img-2 {
+  background-image: url("/img/ssr-bg-4.jpg");
 }
 
 :root {
@@ -129,30 +206,13 @@ h4 {
 
 main {
   height: 50%;
-  padding: 0 2vh;
   position: relative;
-  margin: auto var(--contentPadding);
+  margin: auto 0;
   overflow: hidden;
 }
 
 .txt-light {
   color: rgba(0, 0, 0, .8);
-}
-
-.landing::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--mozGrey);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  content: "";
-  opacity: .9;
 }
 
 svg#Mozilla {
@@ -179,6 +239,29 @@ svg#Mozilla {
 .coming-soon {
   background-color: rgba(255, 255, 255, 1);
   min-height: 50vh;
+}
+
+.landing-section-headline.section-headline {
+  font-size: 3rem;
+  max-width: 600px;
+  margin: auto auto 1rem auto;
+  line-height: 1.1;
+}
+
+.landing-date {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+p:first-child:first-letter {
+  float: left;
+  font-family: var(--zillaSlab);
+  font-weight: 600;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
 }
 
 .sub-section-headline {
@@ -284,7 +367,10 @@ footer {
 .sub-main {
   min-height: 30vh;
   height: auto;
-  background: var(--mozGrey);
+  background: url("/img/ssr-bg-5.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-shaded {
@@ -745,13 +831,10 @@ span.contact-email::before {
 
 h1 {
   line-height: 1;
-  font-size: var(--h1Size);
-  /* opacity: 0.8; */
+  font-size: 80px;
   margin-bottom: 0;
   letter-spacing: 1px;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--textStrokeColor);
+  color: rgba(255, 255, 255, 1);
 }
 
 h1,
@@ -789,10 +872,7 @@ p {
 }
 
 .temp-landing {
-  border-radius: max(1vh, 1vw);
-  text-align: center;
-  min-height: 50vh;
-  margin: auto;
+  max-width: var(--maxCopyWidth);
   z-index: 3;
 }
 
@@ -803,6 +883,13 @@ p {
 .landing-conference-name {
   margin-bottom: 24px;
   font-family: var(--zillaSlab);
+  font-weight: 600;
+  background-color: black;
+  display: inline;
+  color: white;
+  font-size: 2.5rem;
+  max-width: 700px;
+  line-height: 1.32;
 }
 
 .brought-to-you-by-wrapper {
@@ -992,6 +1079,7 @@ p {
   }
 
   .sub-nav-mobile.show-mobile {
+    display: none;
     border-top: 1px solid rgba(0, 0, 0, .05);
     padding: 0 var(--contentPadding);
     width: 100%;
@@ -1158,6 +1246,10 @@ p {
     padding-bottom: 4rem;
   }
 
+  .landing-section-headline.section-headline {
+    font-size: 2rem;
+  }
+
   p,
   .copy-block,
   .committee-list-item {
@@ -1210,7 +1302,6 @@ p {
   }
 }
 
-
 @media screen and (max-width: 400px) {
   :root {
     --contentPadding: 1rem;
@@ -1237,16 +1328,17 @@ p {
   }
 }
 
-@keyframes fadeBg {
+@keyframes fadeUp {
   0% {
-    opacity: .1;
+    opacity: 0;
+    transform: translateY(30px);
   }
 
   50% {
-    opacity: .5;
+    transform: translateY(0);
   }
 
   100% {
-    opacity: .3;
+    opacity: 1;
   }
 }

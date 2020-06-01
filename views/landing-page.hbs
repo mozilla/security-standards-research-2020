@@ -1,14 +1,23 @@
-<main class="flex-center-column landing">
-  <div class="flex-center-column temp-landing">
+<main class="landing">
+  {{!-- <div class="temp-landing content">
     <h1 class="landing-conference-ssr">SSR 2020</h1>
     <h2 class="landing-conference-name">Security Standardisation Research Conference 2020</h2>
-    <a class="temp-landing-link flex-center-column" href="/call-for-papers" target="_blank">Call for papers</a>
-  </div>
+  </div> --}}
+  <div class="bg bg-img-1"></div>
+  <div class="bg bg-img-2"></div>
+  <div class="bg bg-img-3"></div>
+  <div class="bg bg-img-4"></div>
+  <div class="flex-center-content virtual-callout-wrapper">
+      <span class="virtual-callout">Due to COVID-19, the 6th Conference on Security Standards Research will be held virtually.</span>
+  {{!-- <h4 class="date observed">{{ getString "date" }}</h4> --}}
+</div>
 </main>
 <div class="content flex-center-content">
-  <h2 class="section-headline observed">{{ getString "conference-name-full" }}</h2>
-  <h3 class="landing-sub-head observed">The 6th Conference on Security Standards Research will be held virtually.</h3>
-  <h4 class="date text-bg observed">{{ getString "date" }}</h4>
+  <div class="text-center">
+    <h2 class="landing-section-headline section-headline observed">{{ getString "conference-name-full" }}</h2>
+    {{!-- <h3 class="landing-section-sub-head section-sub-headline observed">The 6th Conference on Security Standards Research will be held virtually.</h3> --}}
+    <h3 class="landing-date observed">{{ getString "date" }}</h3>
+  </div>
   <section class="copy-wrapper">
     {{#each (getLandingStrings)}}
       <p class="copy-block {{ blockClasses }} observed txt-light">{{{ this.copyBlock }}}</p>

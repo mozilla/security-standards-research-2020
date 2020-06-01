@@ -49,14 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const onObservation = (entries, observer) => {
       entries.forEach(entry => {
-        if ((entry.intersectionRatio > .15 && entry.target.classList.contains("papers-section"))) {
-          const sectionId = entry.target.dataset.sectionId;
-          const previouslyActiveLink = document.querySelector(".active");
-          if (previouslyActiveLink.dataset.sectionId !== entry.target.dataset.sectionId) {
-            previouslyActiveLink.classList.remove("active");
-            subNavLinks[sectionId].classList.add("active");
-          }
-        }
+        // if ((entry.intersectionRatio > .15 && entry.target.classList.contains("papers-section"))) {
+        //   const sectionId = entry.target.dataset.sectionId;
+        //   const previouslyActiveLink = document.querySelector(".sub-nav-link.active");
+        //   if (previouslyActiveLink.dataset.sectionId !== entry.target.dataset.sectionId) {
+        //     previouslyActiveLink.classList.remove("active");
+        //     const newActiveLink = subNavLinks[sectionId];
+        //     newActiveLink.classList.add("active");
+        //     // subNavLinks[sectionId].classList.add("active");
+        //   }
+        // }
         if (entry.isIntersecting && entry.target.classList.contains("observed")) {
           entry.target.classList.add("fade-in");
           if (!entry.target.classList.contains("papers-section")) {
@@ -92,11 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const papersParagraph = document.querySelector(e.target.dataset.sectionString);
       const newYScroll = papersParagraph.offsetTop+300;
       window.scrollTo(0, newYScroll);
-      if (!subNavLink.classList.contains("active")) {
-        const previousActive = document.querySelector(".active");
-        previousActive.classList.remove("active");
-        subNavLink.classList.add("active");
-      }
+      // if (!subNavLink.classList.contains("active")) {
+      //   const previousActive = document.querySelector(".sub-nav-link.active");
+      //   previousActive.classList.remove("active");
+      //   subNavLink.classList.add("active");
+      // }
     });
   });
 
@@ -113,6 +115,26 @@ document.addEventListener("DOMContentLoaded", () => {
       header.classList.remove("fix-header");
     }
   };
+
+  const bgSpans = document.querySelectorAll(".bg");
+  let activeSlideNum = 0;
+  const crossFadeImg = () => {
+    console.log("CrossFade");
+    bgSpans[activeSlideNum].classList.remove("active-slide");
+    if (activeSlideNum === 3) {
+      activeSlideNum = 0;
+    } else {
+      activeSlideNum++;
+    }
+    bgSpans[activeSlideNum].classList.add("active-slide");
+    console.log(activeSlideNum);
+  };
+  if (bgSpans) {
+    crossFadeImg();
+    window.setInterval(()=> {
+      crossFadeImg();
+    }, 3500);
+  }
 
 
   const mobileMenuButton = document.querySelector(".mobile-menu-button");
