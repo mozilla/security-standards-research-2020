@@ -444,6 +444,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 ul li {
   list-style-type: none;
 }
@@ -827,8 +828,6 @@ span.contact-email::before {
   margin-right: 6px;
 }
 
-/* end new stuff */
-
 h1 {
   line-height: 1;
   font-size: 80px;
@@ -934,6 +933,10 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.speaker-affiliation {
+  font-weight: 300;
 }
 
 .text-bg {

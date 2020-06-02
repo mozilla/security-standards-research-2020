@@ -12,10 +12,8 @@ function getAuthorInstruction() {
   const easyChairLink = "<a class='nested-link' href='https://easychair.org/conferences/?conf=ssr2020' target='_blank' rel='noopener noreferrer'>https://easychair.org/conferences/?conf=ssr2020</a>";
   return [
     `Please submit via ${easyChairLink}.`,
-    "Authors submitting a systematisation of knowledge paper should have a title consisting of “SoK: Title”. This is to ensure that the committee is made aware that the paper is an SoK paper, and so will be reviewed with different criteria.",
-    "Submitted papers must be original, unpublished, anonymous and not submitted to journals or other conferences/workshops that have proceedings. Submissions must be written in English and should be at most 12 pages in double-column ACM format. Papers not meeting these guidelines risk rejection without consideration. All submitted papers will be reviewed by at least three members of the program committee.",
-    "The accepted papers will be published via ACM publications. At least one author of each accepted paper must register for the conference.",
-    `Papers can be submitted using the EasyChair system available at the following address: ${easyChairLink}`,
+    "Submitted papers must be original, unpublished, anonymous and not submitted to journals or other conferences/workshops that have proceedings. Submissions must be written in English and should be at most X pages in Springer LCNS format. Authors should consult <a href='https://drive.google.com/file/d/1R7knUbxnG1qOAemgQi8ZijWVF4dBbdFu/view' rel='noopener noreferrer' target='_blank' class='nested-link'>Springer’s authors’ guidelines</a> and use their proceedings templates, either for LaTeX or for Word, for the preparation of their papers. Springer encourages authors to include their <a href='https://goo.gl/hbsa4D' rel='noopener noreferrer' target='_blank' class='nested-link'>ORCIDs</a> in their papers. Papers not meeting these guidelines risk rejection without consideration.  All submitted papers will be reviewed by at least three members of the program committee.",
+    "For accepted papers, in addition, the corresponding author of each paper, acting on behalf of all of the authors of that paper, must complete and sign a <a href='https://drive.google.com/a/mozilla.com/file/d/1C-Rz3vDtizujRQIMVaZW8NyW97q-r0z0/view?usp=drive_web' class='nested-link' target='_blank' rel='noopener noreferer'>Consent-to-Publish</a> form. The corresponding author signing the copyright form should match the corresponding author marked on the paper. Once the files have been sent to Springer, changes relating to the authorship of the papers cannot be made.",
   ];
 }
 
@@ -117,6 +115,19 @@ function getImportantDates() {
       month: "Nov",
       dateType: "Deadline:",
       calendarLink: "https://calendar.google.com/calendar/r/eventedit?text=SSR+2020+Conference&dates=20201130/20201202&details=For+details,+link+here:+https://ssr2020.mozilla.org",
+    },
+  ];
+}
+
+function getInvitedSpeakers() {
+  return [
+    {
+      speakerName: "Professor Lilian Edwards,",
+      speakerAffiliation: "Newcastle University",
+    },
+    {
+      speakerName: "Nick Sullivan,",
+      speakerAffiliation: "Cloudflare",
     },
   ];
 }
@@ -260,6 +271,7 @@ function showSubNav(args) {
 module.exports = {
   getAuthorInstruction,
   getImportantDates,
+  getInvitedSpeakers,
   getHeaderLinks,
   getLandingStrings,
   getOrganizingCommittee,

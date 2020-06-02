@@ -2,6 +2,13 @@
   <h2 class="sub-section-headline">
     Invited Speakers
   </h2>
-  <p class="copy-block">Nick Sullivan, Cloudflare</p>
+  <ul class="copy-block">
+    {{#each (getInvitedSpeakers)}}
+      <li class="invited-speaker">
+        <span class="speaker-name">{{ speakerName }}</span>
+        <span class="speaker-affiliation">{{ speakerAffiliation }}</span>
+      </li>
+    {{/each}}
+  </ul>
   <span class="ital invited-speakers">Additional speakers and speaker bios coming soon.</span>
 </div>
