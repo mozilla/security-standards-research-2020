@@ -66,24 +66,26 @@
               </li>
             {{/each}}
           </ul>
-          </section>
-          <section class="organizing-committee-wrapper">
-            <div class="max-content-width">
-              <h3 class="block-section-sub-head">Organizing Committee</h3>
-              <ul class="committee-list organizing-committee-list">
-                {{#each (getOrganizingCommittee)}}
-                  <li class="flx-row committee-list-item observed">
-                    <span class="organizing-committee-member-title">
-                      {{ this.memberTitle }}
-                    </span>
-                    <span class="organizing-committee-member-name txt-light">
-                      {{{ this.memberNameLocation }}}
-                    </span>
-                  </li>
-                {{/each}}
-              </ul>
-            </div>
+        </section>
+        <section class="organizing-committee-wrapper">
+          <div class="max-content-width">
+            <h3 class="block-section-sub-head">Organizing Committee</h3>
+            <ul class="committee-list organizing-committee-list">
+              {{#each (getOrganizingCommittee)}}
+                <li class="flx-row committee-list-item observed">
+                  <span class="organizing-committee-member-title">
+                    {{ this.memberTitle }}
+                  </span>
+                  <span class="organizing-committee-member-name txt-light">
+                    {{{ this.memberNameLocation }}}
+                  </span>
+                </li>
+              {{/each}}
+            </ul>
           </div>
+        </section>
+        {{> logos }}
+      </div>
     </section>
   </div>
 

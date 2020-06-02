@@ -743,6 +743,16 @@ button,
   text-align: center;
 }
 
+.logos {
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  margin-top: 4rem;
+  padding-top: 4rem;
+}
+.springer-logo {
+  margin: auto 0 auto auto;
+  max-width: 150px;
+}
+
 section#committees,
 section#topics,
 section#call-for-papers {
