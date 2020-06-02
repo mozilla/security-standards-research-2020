@@ -367,11 +367,14 @@ footer {
 .sub-main {
   min-height: 30vh;
   height: auto;
-  background: url("/img/ssr-bg-5.jpg");
-  background-position: center center;
+  background-position: top center;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
+}
+
+.sub-main.papers {
+  background: url("/img/ssr-bg-5.jpg");
 }
 
 .paper-submission {
@@ -725,6 +728,10 @@ button,
 
 .sub-nav-link:nth-of-type(3).active {
   border-right: 2px solid var(--mozLightYellow);
+}
+
+.sub-nav-link:nth-of-type(4).active {
+  border-right: 2px solid var(--mozBlue);
 }
 
 .observed {
@@ -1104,9 +1111,11 @@ p {
 
   .sub-nav-link {
     margin-bottom: 0;
-    padding: .5rem 0;
-    margin-left: 10px;
+    padding: 1rem 0;
+    margin-left: 12px;
     border: none !important;
+    font-size: 13px;
+    font-weight: 500;
   }
 
   .sub-nav-link.active {
@@ -1161,10 +1170,6 @@ p {
   .desktop-menu {
     display: none;
   }
-
-  /* .slide-in-header a {
-    pointer-events: none;
-  } */
 
   .slide-in-header .ssr-link {
     pointer-events: all;
@@ -1296,6 +1301,31 @@ p {
 @media screen and (max-width: 500px) {
   :root {
     --h1Size: calc(48px + 6vw);
+    --contentPadding: 1rem;
+  }
+
+  .child-link {
+    margin-right: 0;
+  }
+
+  .sub-nav-mobile.show-mobile {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: .75rem;
+  }
+
+  .sub-nav-link {
+    margin: 0;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: .75rem;
+    padding-top: 0;
+    border-right: none !important;
+  }
+
+  .mobile-menu-button {
+    right: .5rem;
   }
 
   .coming-soon,
@@ -1317,18 +1347,8 @@ p {
 }
 
 @media screen and (max-width: 400px) {
-  :root {
-    --contentPadding: 1rem;
-  }
-
   h1.landing-conference-ssr {
     font-size: 60px;
-  }
-
-  .sub-nav-link {
-    margin: auto;
-    text-align: center;
-    font-weight: 400;
   }
 }
 

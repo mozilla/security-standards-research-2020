@@ -49,16 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const onObservation = (entries, observer) => {
       entries.forEach(entry => {
-        // if ((entry.intersectionRatio > .15 && entry.target.classList.contains("papers-section"))) {
-        //   const sectionId = entry.target.dataset.sectionId;
-        //   const previouslyActiveLink = document.querySelector(".sub-nav-link.active");
-        //   if (previouslyActiveLink.dataset.sectionId !== entry.target.dataset.sectionId) {
-        //     previouslyActiveLink.classList.remove("active");
-        //     const newActiveLink = subNavLinks[sectionId];
-        //     newActiveLink.classList.add("active");
-        //     // subNavLinks[sectionId].classList.add("active");
-        //   }
-        // }
         if (entry.isIntersecting && entry.target.classList.contains("observed")) {
           entry.target.classList.add("fade-in");
           if (!entry.target.classList.contains("papers-section")) {
@@ -91,14 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
   subNavLinks.forEach(subNavLink => {
     subNavLink.addEventListener("click", (e) => {
       e.preventDefault();
+      const navLink = e.target;
       const papersParagraph = document.querySelector(e.target.dataset.sectionString);
-      const newYScroll = papersParagraph.offsetTop+300;
+      const newYScroll = (window.innerWidth > 500) ? papersParagraph.offsetTop+300 : papersParagraph.offsetTop+200;
       window.scrollTo(0, newYScroll);
-      // if (!subNavLink.classList.contains("active")) {
-      //   const previousActive = document.querySelector(".sub-nav-link.active");
-      //   previousActive.classList.remove("active");
-      //   subNavLink.classList.add("active");
-      // }
+        document.querySelectorAll(".sub-nav-link.active").forEach(link => {
+          if (link.dataset.sectionId !== navLink.dataset.sectionId) {
+            link.classList.remove("active");
+          }
+        });
+        navLink.classList.add("active");
     });
   });
 
