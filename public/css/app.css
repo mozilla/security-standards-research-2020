@@ -371,11 +371,22 @@ footer {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+.paper-submission {
+  background-image: url("/img/ssr-bg-7.jpg");
+  opacity: .9;
+}
+
+.paper-sub-cta {
+  font-weight: 600;
 }
 
 .bg-shaded {
   background-color: rgba(0, 0, 0, .03);
 }
+
 .content {
   margin: auto;
   padding: var(--containerPadding) var(--contentPadding);
