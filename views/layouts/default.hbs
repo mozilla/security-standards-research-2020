@@ -13,9 +13,12 @@
     {{!-- <meta name="twitter:card" content="summary_large_image" /> --}}
     <meta name="twitter:description" content="{{ getString "websiteDescription" }}" />
     <meta name="twitter:title" content="{{ getString "websiteTitle" }}" />
+    <script type="text/javascript" src="/js/app.js"></script>
     <title>{{ getString "websiteTitle" }}</title>
   </head>
   <body>
+    {{> header }}
     {{{ body }}}
+    {{> footer }}
   </body>
 </html>

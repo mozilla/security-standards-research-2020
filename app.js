@@ -28,7 +28,7 @@ app.use(helmet.contentSecurityPolicy({
     imgSrc: ["'self'"],
     objectSrc: ["'self'", "blob"],
     scriptSrc: ["'self'"],
-    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'"],
+    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*"],
   },
 }));
 app.use(helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" }));
@@ -55,8 +55,44 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/papers-pdf", (req, res) => {
-  res.render("call-for-papers", {
+app.get("/call-for-papers", (req, res) => {
+  res.render("papers/call-for-papers", {
+  });
+});
+
+app.get("/accepted-papers", (req, res) => {
+  res.render("papers/accepted-papers", {
+  });
+});
+
+app.get("/paper-submission", (req, res) => {
+  res.render("papers/paper-submission", {
+  });
+});
+
+app.get("/important-dates", (req, res) => {
+  res.render("important-dates", {
+
+  });
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact", {
+  });
+});
+
+app.get("/programme", (req, res) => {
+  res.render("programme/programme", {
+  });
+});
+
+app.get("/registration", (req, res) => {
+  res.render("registration", {
+  });
+});
+
+app.get("/invited-speakers", (req, res) => {
+  res.render("programme/invited-speakers", {
   });
 });
 

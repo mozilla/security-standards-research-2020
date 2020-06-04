@@ -1,0 +1,20 @@
+<div class="full-screen important-dates max-content-width fade-in">
+  <h2 class="sub-section-headline">
+    Important Dates
+  </h2>
+    <ul class="important-dates-list flx-row">
+    {{#each (getImportantDates)}}
+      <li class="important-date-list-item flx observe">
+        <div class="date-callout flex-center-column">
+          <span class="event-day">{{ day }}</span>
+          <span class="event-month">{{ month }}</span>
+        </div>
+        <a class="google-calendar-link flx-col inset-hover" href="{{calendarLink}}">
+          <span class="event-date flx-row">{{ eventDate }}</span>
+          <span class="event-title bold">{{ eventTitle }}</span>
+          <span class="google-calendar-link-text">Google Calendar</span>
+        </a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

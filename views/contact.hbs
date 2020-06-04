@@ -1,0 +1,17 @@
+<div class="full-screen max-content-width fade-in">
+  <h2 class="sub-section-headline">
+    Contact
+  </h2>
+  <p class="copy-block txt-light">All questions about submissions should be emailed to a member of the organizing committee.</p>
+  <ul>
+    {{#each (getOrganizingCommittee)}}
+    <li class="flx-col contact-list-item">
+      <div class="flx-row">
+        <span class="member-title bold">{{ memberTitle }}:  </span>
+        <span class="contact-name">{{ memberName }}</span>
+      </div>
+      <a class="contact-mail-to" href="mailto:{{emailAddress}}"><span class="contact-email txt-light flx-row">{{ emailAddress }}</span></a>
+    </li>
+    {{/each}}
+  </ul>
+</div>
