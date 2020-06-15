@@ -212,6 +212,7 @@ function getProgramCommittee() {
     "Raphael Spreitzer, SGS Digital Trust Services GmbH",
     "Ehsan Toreini, Newcastle University",
     "Christopher Wood, Cloudflare",
+    "Joanne Woodage, Microsoft Research",
     "Kazuki Yoneyama, Ibaraki University",
   ];
 }
