@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+embed {
+  min-height: 100vh !important;
+  height: 100% !important;
+  bottom: 0 !important;
+}
+
 @font-face {
   font-family: "Metropolis";
   font-style: normal;
@@ -478,7 +484,6 @@ ul li {
 }
 
 header  {
-  /* top: -60px; */
   left: 0;
   right: 0;
   z-index: 4;
