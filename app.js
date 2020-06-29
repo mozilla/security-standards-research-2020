@@ -28,7 +28,7 @@ app.use(helmet.contentSecurityPolicy({
     imgSrc: ["'self'"],
     objectSrc: ["'self'", "blob"],
     scriptSrc: ["'self'"],
-    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*"],
+    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'"],
   },
 }));
 app.use(helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" }));
