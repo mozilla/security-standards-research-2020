@@ -205,6 +205,7 @@ function getProgramCommittee() {
     "Saqib A. Kakvi, Bergische Universität Wupperta",
     "Mohsin Khan, University of Helsinki",
     "Markulf Kohlweiss, University of Edinburgh",
+    "Stephan Krenn, Austrian Institute of Technology",
     "Thalia Laing, HP",
     "Wanpeng Li, University of Aberdeen",
     "Catherine Meadows, Naval Research Laboratory",
