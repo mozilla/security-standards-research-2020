@@ -128,7 +128,10 @@ function getInvitedSpeakers() {
     {
       speakerName: "Nick Sullivan,",
       speakerAffiliation: "Cloudflare",
-      bio: "Nick Sullivan is Head of Research at Cloudflare, a leading Internet security, performance, and reliability company. He leads research efforts in the fields of security and privacy, cryptography, Internet measurement, and emerging networking paradigms. Nick is also the co-chair of the Crypto Forum Research Group, which defines international standards in cryptography for the Internet Research Task Force. Prior to working at Cloudflare, he developed encryption technology for Apple’s Internet Services division, co-wrote Symantec’s Internet Security Threat Report, and completed degrees in both Computer Science and Pure Mathematics. He is passionate about improving the Internet through cutting-edge research and the development of open standards."
+      bio: [
+        "Nick Sullivan is Head of Research at Cloudflare, a leading Internet security, performance, and reliability company. He leads research efforts in the fields of security and privacy, cryptography, Internet measurement, and emerging networking paradigms. Nick is also the co-chair of the Crypto Forum Research Group, which defines international standards in cryptography for the Internet Research Task Force.",
+        "Prior to working at Cloudflare, he developed encryption technology for Apple’s Internet Services division, co-wrote Symantec’s Internet Security Threat Report, and completed degrees in both Computer Science and Pure Mathematics. He is passionate about improving the Internet through cutting-edge research and the development of open standards.",
+      ],
     },
   ];
 }

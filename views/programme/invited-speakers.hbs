@@ -1,5 +1,6 @@
-<div class="full-screen max-content-width fade-in">
-  <h2 class="sub-section-headline">
+<main class="sub-main main-invited-speakers"></main>
+<div class="max-content-width fade-in section-invited-speakers">
+  <h2 class="section-headline">
     Invited Speakers
   </h2>
   <ul class="copy-block">
@@ -7,8 +8,11 @@
       <li class="invited-speaker">
         <span class="speaker-name">{{ speakerName }}</span>
         <span class="speaker-affiliation">{{ speakerAffiliation }}</span>
+        {{#each bio}}
+          <p class="copy-block speaker-bio">{{ this }}</p>
+        {{/each}}
       </li>
     {{/each}}
   </ul>
-  <span class="ital invited-speakers">Additional speakers and speaker bios coming soon.</span>
+  <p class="ital invited-speakers">Additional speakers and speaker bios coming soon.</p>
 </div>
