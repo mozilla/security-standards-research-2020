@@ -63,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 main.landing {
@@ -381,6 +382,17 @@ footer {
 
 .sub-main.papers {
   background: url("/img/ssr-bg-5.jpg");
+}
+
+.section-invited-speakers {
+  padding-bottom: 2rem;
+}
+
+.sub-main.main-invited-speakers {
+  background: url("/img/ssr-bg-1.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
 }
 
 .paper-submission {
@@ -761,7 +773,8 @@ button,
 
 section#committees,
 section#topics,
-section#call-for-papers {
+section#call-for-papers,
+.section-invited-speakers {
   padding-top: 4rem;
 }
 
@@ -969,8 +982,26 @@ p {
   user-select: none;
 }
 
+.speaker-name {
+  font-family: var(--zillaSlab);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.copy-block.speaker-bio {
+  font-size: 17px;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+
+}
+
+li.invited-speaker {
+  margin-bottom: .5rem;
+}
+
 .speaker-affiliation {
   font-weight: 300;
+  font-family: var(--zillaSlab);
 }
 
 .text-bg {
@@ -1278,7 +1309,6 @@ p {
 
   .full-screen {
     margin-top: 8rem;
-    padding-bottom: 4rem;
   }
 
   .landing-section-headline.section-headline {
