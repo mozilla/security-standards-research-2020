@@ -1110,13 +1110,6 @@ p {
   opacity: .7;
 }
 
-.invited-speakers.ital {
-  margin-top: 4rem;
-  font-style: italic;
-  font-size: 14px;
-  color: rgba(0, 0, 0, .7);
-}
-
 .speaker-list {
   border-top: 1px solid var(--mozGrey);
   border-bottom: 1px solid var(--mozGrey);
@@ -1126,6 +1119,10 @@ p {
 
 .speaker-bio-block {
   margin-top: 4rem;
+}
+
+.speaker-bio-block:last-of-type {
+  margin-bottom: 4rem;
 }
 
 .speaker-list-link {
