@@ -3,9 +3,19 @@
   <h2 class="section-headline">
     Invited Speakers
   </h2>
+  <ul class="copy-block speaker-list">
+    {{#each (getInvitedSpeakers)}}
+      <li class="invited-speaker speaker-link-list-item">
+        <a href="#{{ target }}" class="speaker-list-link" data-scroll-to-bio="#{{ target }}">
+          <span class="speaker-name">{{ speakerName }}</span>
+          <span class="speaker-affiliation">{{ speakerAffiliation }}</span>
+        </a>
+      </li>
+    {{/each}}
+  </ul>
   <ul class="copy-block">
     {{#each (getInvitedSpeakers)}}
-      <li class="invited-speaker">
+      <li id="{{ target }}" class="invited-speaker speaker-bio-block">
         <span class="speaker-name">{{ speakerName }}</span>
         <span class="speaker-affiliation">{{ speakerAffiliation }}</span>
         {{#each bio}}
@@ -14,5 +24,4 @@
       </li>
     {{/each}}
   </ul>
-  <p class="ital invited-speakers">Additional speakers and speaker bios coming soon.</p>
 </div>

@@ -123,10 +123,19 @@ function getInvitedSpeakers() {
   return [
     {
       speakerName: "Professor Lilian Edwards,",
+      target: "lilian-edwards",
       speakerAffiliation: "Newcastle University",
+      bio: [
+        "Lilian Edwards is a leading academic in the field of Internet law. She has taught information technology law, e-commerce law, privacy law and Internet law at undergraduate and postgraduate level since 1996 and been involved with law and artificial intelligence (AI) since 1985.",
+        "She worked at the University of Strathclyde from 1986–1988 and the University of Edinburgh from 1989 to 2006. She became Chair of Internet Law at the University of Southampton from 2006–2008, and then Professor of Internet Law at the University of Sheffield until late 2010, when she returned to Scotland to become Professor of E-Governance at the University of Strathclyde, while retaining close links with the renamed SCRIPT (AHRC Centre) at the University of Edinburgh. She resigned from that role in 2018 to take up a new Chair in Law, Innovation and Society at Newcastle University. She also has close links with the Oxford Internet Institute. ",
+        "She has co-edited (both with Charlotte Waelde and alone) four editions of a textbook, Law and the Internet (later Law, Policy and the Internet); the fourth edition appeared in 2018. She won the Barbara Wellberry Memorial Prize in 2004 for work on online privacy and data trusts. A collection of her essays, The New Legal Framework for E-Commerce in Europe, was published in 2005. She is Associate Director, and was co-founder, of the Arts and Humanities Research Council (AHRC) Centre for IP and Technology Law (now SCRIPT). Edwards has consulted for the EU Commission, the OECD, and WIPO.",
+        "Edwards co-chairs GikII, an annual series of international workshops on the intersections between law, technology and popular culture.",
+        "Edwards is Deputy Director of CREATe, the Centre for Creativity, Regulation, Enterprise and Technology, a Research Councils UK research centre about copyright and business models.",
+      ],
     },
     {
       speakerName: "Nick Sullivan,",
+      target: "nick-sullivan",
       speakerAffiliation: "Cloudflare",
       bio: [
         "Nick Sullivan is Head of Research at Cloudflare, a leading Internet security, performance, and reliability company. He leads research efforts in the fields of security and privacy, cryptography, Internet measurement, and emerging networking paradigms. Nick is also the co-chair of the Crypto Forum Research Group, which defines international standards in cryptography for the Internet Research Task Force.",

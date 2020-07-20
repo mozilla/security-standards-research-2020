@@ -158,4 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelectorAll(".speaker-list-link").forEach(speakerLink => {
+    speakerLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const selectedBio = e.target.dataset.scrollToBio;
+      const bioToView = document.querySelector(selectedBio);
+      const newYScroll = (window.innerWidth > 500) ? bioToView.offsetTop-300 : bioToView.offsetTop-200;
+      window.scrollTo(0, newYScroll);
+    });
+  });
+
 });
