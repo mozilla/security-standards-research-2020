@@ -1149,6 +1149,18 @@ p {
   line-height: 1.5;
 }
 
+.form-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.full-screen .form-wrapper #mc_embed_signup {
+  background: rgba(238, 238, 238, 0.712) !important;
+  background-color: rgba(238, 238, 238, 0.712) !important;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
 
 @media screen and (max-width: 950px) {
   .topic-wrapper {
@@ -1163,6 +1175,10 @@ p {
 
   footer {
     min-height: 100px;
+  }
+
+  .full-screen {
+    margin-top: 8rem;
   }
 
   .important-date-list-item {
@@ -1334,10 +1350,6 @@ p {
   :root {
     --containerPadding: 3rem;
     --h1Size: calc(60px + 6vw);
-  }
-
-  .full-screen {
-    margin-top: 8rem;
   }
 
   .landing-section-headline.section-headline {
