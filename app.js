@@ -24,11 +24,12 @@ app.use(helmet.contentSecurityPolicy({
     connectSrc: ["'self'"],
     fontSrc: ["'self'"],
     frameAncestors: ["'self'"],
+    formAction: ["https://lesleynorton.us2.list-manage.com/"],
     mediaSrc: ["'self'"],
     imgSrc: ["'self'"],
     objectSrc: ["'self'", "blob"],
-    scriptSrc: ["'self'"],
-    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'"],
+    scriptSrc: ["'self'",  "https://lesleynorton.us2.list-manage.com/", "s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"],
+    styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'","http://cdn-images.mailchimp.com/embedcode/classic-10_7.css"],
   },
 }));
 app.use(helmet.referrerPolicy({ policy: "strict-origin-when-cross-origin" }));
