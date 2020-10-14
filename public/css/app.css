@@ -648,6 +648,7 @@ button,
   color: rgba(0, 0, 0, .85);
   font-weight: bolder;
   margin-bottom: 4px;
+  font-family: sans-serif !important;
 }
 
 .header-date,
@@ -1150,14 +1151,16 @@ p {
 }
 
 .form-wrapper {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .full-screen .form-wrapper #mc_embed_signup {
   background: rgba(238, 238, 238, 0.712) !important;
   background-color: rgba(238, 238, 238, 0.712) !important;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   padding-top: 1rem;
 }
 
@@ -1175,6 +1178,10 @@ p {
 
   footer {
     min-height: 100px;
+  }
+
+  .form-wrapper {
+    margin-top: 0;
   }
 
   .full-screen {
