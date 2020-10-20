@@ -1177,7 +1177,7 @@ p {
 
 .program-hl {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .program-day {
@@ -1198,20 +1198,25 @@ p {
 }
 
 .session {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .session-num {
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
   padding: 1rem;
   margin-bottom: 1rem;
   background-image: url("/img/diag-bg.svg");
   background-repeat: repeat;
 }
 
+.program-hl-wrapper {
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
 .session-time {
   padding: 0 2rem;
+  font-size: 15px;
 }
 
 .session-item {
@@ -1222,7 +1227,6 @@ p {
   font-style: italic;
   font-size: 14px;
 }
-
 
 @media screen and (max-width: 950px) {
   .topic-wrapper {

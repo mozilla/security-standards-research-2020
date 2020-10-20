@@ -284,12 +284,12 @@ function program() {
   return [
     {
       date: "30 November 2020",
+      welcome: {
+        time: "15:30 - 15:40",
+        desc: "Welcome and Housekeeping",
+      },
       sessions: [
         [
-          {
-            time: "15:30 - 15:40",
-            desc: "Welcome and Housekeeping",
-          },
           {
             time: "15:40 - 16:00",
             desc: "On the Memory Fault Resilience of TLS 1.3",
@@ -333,12 +333,12 @@ function program() {
     },
     {
       date: "1 December 2020",
+      welcome: {
+        time: "15:30 - 15:40",
+        desc: "Welcome and Housekeeping",
+      },
       sessions: [
         [
-          {
-            time: "15:30 - 15:40",
-            desc: "Welcome and Housekeeping",
-          },
           {
             time: "15:40 - 16:00",
             desc: "The Vacuity of the Open Source Security Testing Methodology Manual",

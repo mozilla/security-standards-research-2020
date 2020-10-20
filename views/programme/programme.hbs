@@ -1,12 +1,29 @@
 <main class="sub-main main-invited-speakers"></main>
 <div class="program max-content-width fade-in">
-  <h2 class="zilla-slab program-hl">
-    Programme
-  </h2>
+  <div class="program-hl-wrapper flx-row">
+  <h2 class="zilla-slab program-hl">Programme</h2>
+  <div class="program-nav">
+    {{#each (program)}}
+      <a class="nested-link" href="#day{{add 1 @index}}">[ {{ date }} ]</a>
+    {{/each}}
+  </div>
+  </div>
   <div class="program-wrapper">
+    <span class="text-center">All times given in CET</span>
   {{#each (program)}}
-    <div class="program-day">
+    <div id="day{{add 1 @index}}" class="program-day">
     <h3 class="text-center program-date">{{ date }}</h3>
+    {{#if welcome}}
+    <div class="session">
+              <div class="session-item flx-row">
+            <span class="session-time">{{ welcome.time }}</span>
+            <div class="session-copy flx-col">
+              <h5 class="session-desc">{{ welcome.desc }}</h5>
+            </div>
+
+          </div>
+    </div>
+    {{/if}}
     {{#each sessions}}
     <div class="session">
       <h4 class="session-num text-center">Session {{add 1 @index}}</h4>
