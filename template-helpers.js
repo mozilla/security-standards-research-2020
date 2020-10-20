@@ -276,6 +276,96 @@ function getTopics() {
   ];
 }
 
+function add(val1, val2) {
+  return val1 + val2;
+}
+
+function program() {
+  return [
+    {
+      date: "30 November 2020",
+      sessions: [
+        [
+          {
+            time: "15:30 - 15:40",
+            desc: "Welcome and Housekeeping",
+          },
+          {
+            time: "15:40 - 16:00",
+            desc: "On the Memory Fault Resilience of TLS 1.3",
+            speakers: "Lukas Brandstetter, Marc Fischlin, Robin Leander Schröder and Michael Yonli",
+          },
+          {
+            time: "16:00 - 16:20",
+            desc: "On Internal Re-Keying",
+            speakers: "Liliya Akhmetzyanova, Evgeny Alekseev, Stanislav Smyshlyaev and Igor Oshkin",
+          },
+          {
+            time: "16:20 - 16:40",
+            desc: "A Systematic Appraisal of Side Channel Evaluation Strategies",
+            speakers: "Melissa Azouaoui, Davide Bellizia, Ileana Buhan, Nicolas Debande, Sebastien Duval, Christophe Giraud, Eliane Jaulmes, Francois Koeune, Elisabeth Oswald, Francois-Xavier Standaert and Carolyn Whitnall",
+          },
+        ],
+        [
+          {
+            time: "17:00 - 17:40",
+            desc: "Invited Talk",
+            speakers: "Nick Sullivan",
+          },
+        ],
+        [
+          {
+            time: "17:50 - 18:10",
+            desc: "Taming the many EdDSAs",
+            speakers: "Konstantinos Chalkias, François Garillot and Valeria Nikolaenko",
+          },
+          {
+            time: "18:10 - 18:30",
+            desc: "SoK: Comparison of the Security of Real World RSA Hash-and-Sign Signatures",
+            speakers: "Saqib A. Kakvi",
+          },
+          {
+            time: "18:30 - 18:35",
+            desc: "Close of Day",
+          },
+        ],
+      ],
+    },
+    {
+      date: "1 December 2020",
+      sessions: [
+        [
+          {
+            time: "15:30 - 15:40",
+            desc: "Welcome and Housekeeping",
+          },
+          {
+            time: "15:40 - 16:00",
+            desc: "The Vacuity of the Open Source Security Testing Methodology Manual",
+            speakers: "Martin Albrecht and Rikke Jensen",
+          },
+          {
+            time: "16:00 - 16:20",
+            desc: "Vision: A Critique of Immunity Passports and W3C Decentralized Identifiers",
+            speakers: "Harry Halpin",
+          },
+        ],
+        [
+          {
+            time: "16:30 - 17:10",
+            desc: "Invited Talk",
+            speakers: "Lilian Edwards",
+          },
+          {
+            time: "17:10 - 17:20",
+            desc: "Close of Day",
+          },
+        ],
+      ],
+    },
+  ];
+}
+
 function showSubNav(args) {
   if (args.data.exphbs.view && args.data.exphbs.view === "papers/call-for-papers") {
     return true;
@@ -295,4 +385,6 @@ module.exports = {
   getSubmissionGuidelines,
   getTopics,
   showSubNav,
+  program,
+  add,
 };
