@@ -68,11 +68,6 @@ body {
 
 main.landing {
   min-height: 30vh;
-  /* background-image: url("/img/SSR-COMMONS1.png"); */
-  /* background-image: url("/img/honey-comb.jpeg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; */
   position: relative;
   display: flex;
 }
@@ -188,6 +183,10 @@ body {
 body {
   display: flex;
   flex-direction: column;
+}
+
+.zilla-slab {
+  font-family: var(--zillaSlab);
 }
 
 a,
@@ -648,6 +647,7 @@ button,
   color: rgba(0, 0, 0, .85);
   font-weight: bolder;
   margin-bottom: 4px;
+  font-family: sans-serif !important;
 }
 
 .header-date,
@@ -1121,9 +1121,7 @@ p {
   margin-top: 4rem;
 }
 
-.speaker-bio-block:last-of-type {
-  margin-bottom: 4rem;
-}
+
 
 .speaker-list-link {
   text-decoration: none;
@@ -1149,6 +1147,86 @@ p {
   line-height: 1.5;
 }
 
+.form-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.full-screen .form-wrapper #mc_embed_signup {
+  background: rgba(238, 238, 238, 0.712) !important;
+  background-color: rgba(238, 238, 238, 0.712) !important;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.program {
+  padding-top: 4rem;
+}
+
+.session-copy {
+  padding-left: 2rem;
+  max-width: 400px;
+}
+
+.session-desc {
+  margin: 0 auto .35rem 0;
+  font-size: 16px;
+}
+
+.program-hl {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.program-day {
+  border: 1px solid #eee;
+  margin-bottom: 4rem;
+}
+
+.program-date {
+  background-color: #000000;
+  padding: 1rem;
+  margin-bottom: 0;
+  color: #FFFFFF;
+}
+
+.session-time {
+  margin-bottom: .25rem;
+  display: inline-block;
+}
+
+.session {
+  padding-bottom: 1rem;
+}
+
+.session-num {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-image: url("/img/diag-bg.svg");
+  background-repeat: repeat;
+}
+
+.program-hl-wrapper {
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.session-time {
+  padding: 0 2rem;
+  font-size: 15px;
+}
+
+.session-item {
+  padding-top: 1rem;
+}
+
+.session-speakers {
+  font-style: italic;
+  font-size: 14px;
+}
 
 @media screen and (max-width: 950px) {
   .topic-wrapper {
@@ -1163,6 +1241,14 @@ p {
 
   footer {
     min-height: 100px;
+  }
+
+  .form-wrapper {
+    margin-top: 0;
+  }
+
+  .full-screen {
+    margin-top: 8rem;
   }
 
   .important-date-list-item {
@@ -1328,16 +1414,16 @@ p {
   .landing-conference-name {
     max-width: 320px;
   }
+
+  .session-item {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 600px) {
   :root {
     --containerPadding: 3rem;
     --h1Size: calc(60px + 6vw);
-  }
-
-  .full-screen {
-    margin-top: 8rem;
   }
 
   .landing-section-headline.section-headline {

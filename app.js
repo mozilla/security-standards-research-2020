@@ -24,10 +24,11 @@ app.use(helmet.contentSecurityPolicy({
     connectSrc: ["'self'"],
     fontSrc: ["'self'"],
     frameAncestors: ["'self'"],
+    formAction: ["https://mozilla.us2.list-manage.com/subscribe/"],
     mediaSrc: ["'self'"],
     imgSrc: ["'self'"],
     objectSrc: ["'self'", "blob"],
-    scriptSrc: ["'self'"],
+    scriptSrc: ["'self'", "https://mozilla.us2.list-manage.com/", "https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"],
     styleSrc: ["'self'", "https://security-standards-research.herokuapp.com/docs/*", "'unsafe-inline'"],
   },
 }));
