@@ -122,15 +122,13 @@ function getImportantDates() {
 function getInvitedSpeakers() {
   return [
     {
-      speakerName: "Professor Lilian Edwards,",
+      speakerName: "Professor Liqun Chen,",
       target: "lilian-edwards",
-      speakerAffiliation: "Newcastle University",
+      speakerAffiliation: "University of Surrey",
       bio: [
-        "Lilian Edwards is a leading academic in the field of Internet law. She has taught information technology law, e-commerce law, privacy law and Internet law at undergraduate and postgraduate level since 1996 and been involved with law and artificial intelligence (AI) since 1985.",
-        "She worked at the University of Strathclyde from 1986–1988 and the University of Edinburgh from 1989 to 2006. She became Chair of Internet Law at the University of Southampton from 2006–2008, and then Professor of Internet Law at the University of Sheffield until late 2010, when she returned to Scotland to become Professor of E-Governance at the University of Strathclyde, while retaining close links with the renamed SCRIPT (AHRC Centre) at the University of Edinburgh. She resigned from that role in 2018 to take up a new Chair in Law, Innovation and Society at Newcastle University. She also has close links with the Oxford Internet Institute. ",
-        "She has co-edited (both with Charlotte Waelde and alone) four editions of a textbook, Law and the Internet (later Law, Policy and the Internet); the fourth edition appeared in 2018. She won the Barbara Wellberry Memorial Prize in 2004 for work on online privacy and data trusts. A collection of her essays, The New Legal Framework for E-Commerce in Europe, was published in 2005. She is Associate Director, and was co-founder, of the Arts and Humanities Research Council (AHRC) Centre for IP and Technology Law (now SCRIPT). Edwards has consulted for the EU Commission, the OECD, and WIPO.",
-        "Edwards co-chairs GikII, an annual series of international workshops on the intersections between law, technology and popular culture.",
-        "Edwards is Deputy Director of CREATe, the Centre for Creativity, Regulation, Enterprise and Technology, a Research Councils UK research centre about copyright and business models.",
+        "Liqun Chen is a Professor in Secure Systems at the University of Surrey. Prior to taking this position in 2016, she was a principal research scientist at Hewlett-Packard Laboratories, Bristol, UK. During her 19 years working for the company, she developed several cryptographic schemes that were adopted by International Standards bodies, ISO/IEC, IEEE and TCG. In particular, she designed several cryptographic algorithms (including direct anonymous attestation and multiple signature interfaces) used in the Trusted Platform Module (TPM).",
+        "She co-authored the paper “Direct anonymous attestation”, which was originally published at ACM CCS 2004 and received a Test of Time award at ACM CCS 2014. She is the technical leader and principal investigator in the EU H2020 FutureTPM project, which aims to develop a post-quantum TPM. Her current research interests are applied cryptography, trusted computing and network security. She has served as general or program committee chairman at 18 international conferences and as associate editor or member of the editorial board for 4 international journals.",
+        "She has also served as editor or co-editor for 7 international standards and serves as the deputy chairman of Technical Subcommittee 2 of BSI IST/33, dealing with Security Mechanisms and providing input to ISO/IEC JTC1/SC27. She has also served as editor or co-editor for 7 international standards and serves as the deputy chairman of Technical Subcommittee 2 of BSI IST/33, dealing with Security Mechanisms and providing input to ISO/IEC JTC1/SC27.",
       ],
     },
     {
@@ -354,7 +352,7 @@ function program() {
           {
             time: "16:30 - 17:10",
             desc: "Invited Talk",
-            speakers: "Lilian Edwards",
+            speakers: "Liqun Chen",
           },
           {
             time: "17:10 - 17:20",
