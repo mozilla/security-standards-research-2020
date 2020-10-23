@@ -438,7 +438,7 @@ module.exports = {
   getAuthorInstruction,
   getImportantDates,
   getInvitedSpeakers,
-  getAcceptedPapers, 
+  getAcceptedPapers,
   getHeaderLinks,
   getLandingStrings,
   getOrganizingCommittee,

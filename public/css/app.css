@@ -1233,6 +1233,28 @@ p {
   font-size: 14px;
 }
 
+.paper-title {
+  font-weight: 600;
+  font-size: 2rem;
+  display: block;
+  line-height: 1.1;
+}
+
+.paper-authors {
+  display: inline-block;
+  margin: .75rem auto .75rem auto;
+  line-height: 1.5;
+  font-size: 15px;
+  max-width: 650px;
+}
+
+.paper-abstract {
+  margin: .5rem auto 4rem 0;
+  font-size: 1rem;
+  max-width: 660px;
+
+}
+
 @media screen and (max-width: 950px) {
   .topic-wrapper {
     flex: 1 1 49.9999%;
