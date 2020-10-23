@@ -143,6 +143,69 @@ function getInvitedSpeakers() {
   ];
 }
 
+function getAcceptedPapers() {
+  return [
+    {
+      paperTitle: "A Systematic Appraisal of Side Channel Evaluation Strategies",
+      target: "systematic-appraisal",
+      paperAuthors: "Melissa Azouaoui, Davide Bellizia, Ileana Buhan, Nicolas Debande, Sebastien Duval, Christophe Giraud, Eliane Jaulmes, Francois Koeune, Elisabeth Oswald, Francois-Xavier Standaert and Carolyn Whitnall",
+      abstract: [
+        "In this paper we examine the central question that is how well do side channel evaluation regimes capture the true security level of a product. Concretely, answering this question requires considering the optimality of the attack/evaluation strategy selected by the evaluator, and the various steps to instantiate it. We draw on a number of published works and discuss whether state-of-the-art solutions for the different steps of a side-channel security evaluation offer bounds or guarantees of optimality, or if they are inherently heuristic. We use this discussion to provide an informal rating of the steps' optimality and to put forward where risks of overstated security levels remain.",
+      ],
+    },
+    {
+      paperTitle: "On Internal Re-Keying",
+      target: "internal-rekeying",
+      paperAuthors: "Liliya Akhmetzyanova, Evgeny Alekseev, Stanislav Smyshlyaev and Igor Oshkin",
+      abstract: [
+        "In this paper we introduce a classification of existing re-keying-based approaches to increase the security of block cipher operation modes. We introduce the concepts of external and internal re-keying putting the focus on the second one. Whereas the external re-keying approach is widely used and provides the mechanism of key usage control on a message stream processing level, the internal re-keying approach is the first known mechanism providing such a control on a single message processing level. These approaches can be applied completely independently. The internal re-keying approach was already applied to the CTR encryption mode and yielded the CTR-ACPKM mode. The mode is a part of RFC 8645 'Re-keying Mechanisms for Symmetric Keys' which represents the consensus of the Crypto Forum Research Group (CFRG) of the Internet Research Task Force (IRTF). In the current paper we apply the internal re-keying approach to the well-known GCM authenticated encryption mode. The main results of this paper are a new internally re-keyed GCM-ACPKM mode and its security bounds. We estimate the security of the GCM-ACPKM mode respecting standard security notions. We compare both security and performance of the GCM-ACPKM and GCM modes. The results show that changing GCM mode by integrating the ACPKM internal re-keying procedure increases security, significantly extending the lifetime of a key with a negligible loss in performance. Also we show how the re-keying approaches could increase the security of TLS 1.3 and CMS cipher suites.",
+      ],
+    },
+    {
+      paperTitle: "On the Memory Fault Resilience of TLS 1.3",
+      target: "memory-fault",
+      paperAuthors: "Lukas Brandstetter, Marc Fischlin, Robin Leander Schröder and Michael Yonli",
+      abstract: [
+        "Recently, Aranha et al. (Eurocrypt 2020) as well as Fischlin and Günther (CT-RSA 2020) investigated the possibility to model memory fault attacks like Rowhammer in security games, and to deduce statements about the (in)security of schemes against such attacks. They looked into the fault-resistance of signature and AEAD schemes. Here, we extend the approach to the TLS 1.3 key exchange protocol. Our results give a mixed picture about the fault resistance of TLS 1.3. Full fault attacks on the handshake protocol, where the adversary can modify the content of variables arbitrarily, render the protocol completely insecure.  On the positive side we argue that differential faults, where the adversary can flip selected memory cells, do not seem to be harmful to key derivation in the pre-shared-key mode for the handshake. The weaker random fault attacks, where some bits in memory are flipped randomly, still enable successful attacks against the record layer. We therefore present a slight modification for the nonce generation in TLS 1.3 which withstands such attacks.",
+      ],
+    },
+    {
+      paperTitle: "SoK: Comparison of the Security of Real World RSA Hash-and-Sign Signatures",
+      target: "sok-signatures",
+      paperAuthors: "Saqib A. Kakvi",
+      abstract: [
+        "In this modern day and age, where the majority of our communication occurs online, digital signatures are more important than ever before. Of the utmost importance are the standardised signatures that are deployed not only across the Internet, but also in everyday devices, such as debit and credit cards. The development of these signatures began in the 1990s and is still an ongoing process to this day. We will focus on RSA-based hash-and-sign signatures, specifically deterministic hash-and-sign signatures. We will give a survey of all standardised deterministic RSA hash-and-signatures, where we explore the history of each one, from inception, to attacks and finally proofs of security. As the security proofs have also appeared over the span of two decades, their statements are not always compatible with one another. To ensure this, we will consider only deterministic standardised signature schemes included in PKCS, ISO, and ANSI standards, as well as the non-standardised Full-Domain Hash, to provide a complete picture.",
+      ], 
+    },
+    {
+      paperTitle: "Taming the many EdDSAs",
+      target: "taming-edsas",
+      paperAuthors: "Konstantinos Chalkias, François Garillot and Valeria Nikolaenko",
+      abstract: [
+        "This paper analyses security of concrete instantiations of EdDSA by identifying exploitable inconsistencies between standardization recommendations and Ed25519 implementations. We mainly focus on current ambiguity regarding signature verification equations, binding and malleability guarantees, and incompatibilities between randomized batch and single verification. We give a formulation of Ed25519 signature scheme that achieves the highest level of security, explaining how each step of the algorithm links with the formal security properties. We develop op-timizations to allow for more efficient secure implementations. Finally, we designed a set of edge-case test-vectors and run them by some of the most popular Ed25519 libraries. The results allowed us to understand the securitylevel of those implementations and showed that most libraries do not comply with the latest standardization recommendations. The methodology allows to test compatibility of different Ed25519 implementations which is of practical importance for consensus-driven applications.",
+      ],
+    },
+    {
+      paperTitle: "The Vacuity of the Open Source Security Testing Methodology Manual",
+      target: "open-testing",
+      paperAuthors: "Martin Albrecht and Rikke Jensen",
+      abstract: [
+        "The Open Source Security Testing Methodology Manual (OSSTMM) provides a 'scientific methodology for the accurate characterization of operational security' (Herzog, 2010). It is extensively referenced in writings aimed at security testing professionals such as textbooks, standards and academic papers. In this work we offer a fundamental critique of OSSTMM and argue that it fails to deliver on its promise of actual security. Our contribution is threefold and builds on a textual critique of this methodology. First, OSSTMM's central principle is that security can be understood as a quantity of which an entity has more or less. We show why this is wrong and how OSSTMM's unified security score, the rav, is an empty abstraction. Second, OSSTMM disregards risk by replacing it with a trust metric which confuses multiple definitions of trust and, as a result, produces a meaningless score. Finally, OSSTMM has been hailed for its attention to human security. Yet it understands all human agency as a security threat that needs to be constantly monitored and controlled. Thus, we argue that OSSTMM is neither fit for purpose nor can it be salvaged, and it should be abandoned by security professionals.",
+      ],
+    },
+    {
+      paperTitle: "Vision: A Critique of Immunity Passports and W3C Decentralized Identifiers",
+      target: "vision-passports",
+      paperAuthors: "Harry Halpin",
+      abstract: [
+        "Due to the widespread COVID-19 pandemic, there has been a push for 'immunity passports' and even technical proposals. Although the debate about the medical and ethical problems of immunity passports has been widespread, there has been less inspection of the technical foundations of immunity passport schemes. These schemes are envisaged to be used for sharing COVID-19 test and vaccination results in general. The most prominent immunity passport schemes have involved a stack of little-known standards, such as Decentralized Identifiers (DIDs) and Verifiable Credentials (VCs) from the World Wide Web Consortium (W3C). Our analysis shows that this group of technical identity standards are based on under-specified and often non-standardized documents that have substantial security and privacy issues, due in part to the questionable use of blockchain technology. One concrete proposal for immunity passports is even susceptible to dictionary attacks. The use of 'cryptography theater' in efforts like immunity passports, where cryptography is used to allay the privacy concerns of users, should be discouraged in standardization. Deployment of these W3C standards for 'self-sovereign identity' in use-cases like immunity passports could just as well lead to a dangerous form of identity totalitarianism.",
+      ],
+    },
+  ];
+}
+
+
+
 function getSubmissionGuidelines() {
   return [
     "Submission Guidelines Papers offering research contributions to the area of security standardisation are solicited for submission to the SSR 2020 conference. SSR will also accept <span class='bold'>Systematisation of Knowledge (SoK)</span> papers relating to security standardisation, which integrate experience and previous research, drawing new comprehensive conclusions. SoK papers should evaluate, systematise, and contextualise existing knowledge. They should provide a new viewpoint, offer a comprehensive taxonomy, or cast doubt on long-held beliefs, based on compelling evidence. We also welcome SoK papers that document existing standardisation practices and analyse their weaknesses and strengths. We also encourage submission of <span class='bold'>Vision papers</span> relating to security standardisation. The vision track is intended to report on work in progress or concrete ideas for work that has yet to begin. The focus in the vision track is to spark discussion with the goal to provide the authors helpful feedback, pointers to potentially related investigations, and new ideas to explore. Suitable submissions to the vision track include traditional work-in-progress pieces such as preliminary results of pre-studies, but also research proposals and position papers outlining future research.",
@@ -375,6 +438,7 @@ module.exports = {
   getAuthorInstruction,
   getImportantDates,
   getInvitedSpeakers,
+  getAcceptedPapers, 
   getHeaderLinks,
   getLandingStrings,
   getOrganizingCommittee,

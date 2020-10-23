@@ -395,8 +395,13 @@ footer {
 }
 
 .paper-submission {
-  background-image: url("/img/ssr-bg-7.jpg");
+  background-image: url("/img/ssr-bg-5.jpg");
   opacity: .9;
+}
+
+.accepted-papers {
+  background-image: url("/img/ssr-bg-5.jpg");
+  opacity: .9
 }
 
 .paper-sub-cta {
