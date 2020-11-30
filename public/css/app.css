@@ -1155,8 +1155,6 @@ p {
 .form-wrapper {
   margin-top: 4rem;
   margin-bottom: 2rem;
-  border-radius: 1rem;
-  overflow: hidden;
 }
 
 .full-screen .form-wrapper #mc_embed_signup {
